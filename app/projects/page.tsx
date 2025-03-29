@@ -89,37 +89,63 @@ export default function ProjectsPage() {
             Your browser does not support the video tag.
           </video>
         </div>
-
         <div className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
-          {/* Skills Section */}
-          <div className="max-w-2xl mx-auto lg:mx-0">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
-              Skills
-            </h2>
-            <p className="mt-4 text-zinc-400">
-              Please have a look at my skills before diving into my portfolio. I am proficient in a wide range of skills related to multimedia production, video editing, and web design.
-            </p>
-            <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-              <div className="group text-center bg-zinc-800 text-zinc-100 p-4 rounded-lg hover:scale-105 transition-transform duration-300 hover:shadow-xl hover:ring-4 hover:ring-orange-500">
-                <h3 className="font-bold">Video Editing</h3>
-                <p className="text-zinc-400">Premiere Pro, After Effects, Final Cut Pro, Adobe Audition (Audio-editing)</p>
-              </div>
-              <div className="group text-center bg-zinc-800 text-zinc-100 p-4 rounded-lg hover:scale-105 transition-transform duration-300 hover:shadow-xl hover:ring-4 hover:ring-orange-500">
-                <h3 className="font-bold">Web Design</h3>
-                <p className="text-zinc-400">Figma, Adobe XD, Canva, Adobe Photoshop, Adobe Illustrator</p>
-              </div>
-              <div className="group text-center bg-zinc-800 text-zinc-100 p-4 rounded-lg hover:scale-105 transition-transform duration-300 hover:shadow-xl hover:ring-4 hover:ring-orange-500">
-                <h3 className="font-bold">Web Development</h3>
-                <p className="text-zinc-400">HTML, CSS, JavaScript, Express, React, Next.js</p>
-              </div>
-              <div className="group text-center bg-zinc-800 text-zinc-100 p-4 rounded-lg hover:scale-105 transition-transform duration-300 hover:shadow-xl hover:ring-4 hover:ring-orange-500">
-                <h3 className="font-bold">Miscellaneous</h3>
-                <p className="text-zinc-400">Adaptability Skills, Communication Skills, Leadership Skills</p>
+          <div className="flex flex-col lg:flex-row gap-16">
+
+            {/* Skills Section */}
+            <div className="lg:w-2/3">
+              <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
+                Skills
+              </h2>
+              <p className="mt-4 text-zinc-400">
+                Please have a look at my skills before diving into my portfolio. I am proficient in a wide range of skills related to multimedia production, video editing, and web design.
+              </p>
+              <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+                <div className="group text-center bg-zinc-800 text-zinc-100 p-4 rounded-lg hover:scale-105 transition-transform duration-300 hover:shadow-xl hover:ring-4 hover:ring-orange-500">
+                  <h3 className="font-bold">Video Editing</h3>
+                  <p className="text-zinc-400">Premiere Pro, After Effects, Final Cut Pro, Adobe Audition (Audio-editing)</p>
+                </div>
+                <div className="group text-center bg-zinc-800 text-zinc-100 p-4 rounded-lg hover:scale-105 transition-transform duration-300 hover:shadow-xl hover:ring-4 hover:ring-orange-500">
+                  <h3 className="font-bold">Web Design</h3>
+                  <p className="text-zinc-400">Figma, Adobe XD, Canva, Adobe Photoshop, Adobe Illustrator</p>
+                </div>
+                <div className="group text-center bg-zinc-800 text-zinc-100 p-4 rounded-lg hover:scale-105 transition-transform duration-300 hover:shadow-xl hover:ring-4 hover:ring-orange-500">
+                  <h3 className="font-bold">Web Development</h3>
+                  <p className="text-zinc-400">HTML, CSS, JavaScript, Express, React, Next.js</p>
+                </div>
+                <div className="group text-center bg-zinc-800 text-zinc-100 p-4 rounded-lg hover:scale-105 transition-transform duration-300 hover:shadow-xl hover:ring-4 hover:ring-orange-500">
+                  <h3 className="font-bold">Miscellaneous</h3>
+                  <p className="text-zinc-400">Adaptability Skills, Communication Skills, Leadership Skills</p>
+                </div>
               </div>
             </div>
+            {/* Previously Worked For Section */}
+            <div className="lg:w-1/3 text-center">
+              <h2 className="text-2xl font-bold tracking-tight text-zinc-100 sm:text-3xl">
+                Previously worked for
+              </h2>
+              <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-4">
+                {/* Clickable logos with hover effects */}
+                <a href="https://www.primevideo.com/offers/nonprimehomepage/ref=dv_web_force_root" target="_blank" rel="noopener noreferrer">
+                  <img src="/AmazonPrime.png" alt="Amazon Prime Video" className="h-20 mx-auto object-contain bg-zinc-800 rounded-lg p-3 transition-transform duration-300 hover:scale-110 hover:ring-4 hover:ring-orange-500" />
+                </a>
+                <a href="https://www.youtube.com/c/TheBiggerPicture" target="_blank" rel="noopener noreferrer">
+                  <img src="/BPF.jpg" alt="The Bigger Picture Films" className="h-20 mx-auto object-contain bg-zinc-800 rounded-lg p-3 transition-transform duration-300 hover:scale-110 hover:ring-4 hover:ring-orange-500" />
+                </a>
+                <a href="https://ottawa.ca/en" target="_blank" rel="noopener noreferrer">
+                  <img src="/cityOfOttawa.png" alt="The City of Ottawa" className="h-20 mx-auto object-contain bg-zinc-800 rounded-lg p-3 transition-transform duration-300 hover:scale-110 hover:ring-4 hover:ring-orange-500" />
+                </a>
+                <a href="https://www.linkedin.com/company/only-much-louder/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
+                  <img src="/OML.png" alt="Only Much Louder" className="h-20 mx-auto object-contain bg-zinc-800 rounded-lg p-3 transition-transform duration-300 hover:scale-110 hover:ring-4 hover:ring-orange-500" />
+                </a>
+              </div>
+            </div>
+
           </div>
 
           <div className="w-full h-px bg-zinc-800" />
+
+
 
           {/* Projects Section */}
           <div className="max-w-2xl mx-auto lg:mx-0">
