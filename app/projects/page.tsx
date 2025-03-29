@@ -75,22 +75,20 @@ export default function ProjectsPage() {
   return (
     <div className="bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
       <Navigation />
-      <div className="relative">
-        {/* Video at the top */}
+      <div className="relative">{/* Video at the top */}
         <div className="absolute top-0 left-0 w-full h-full z-[-1]">
-          <video
+          <iframe
             className="w-full h-full object-cover"
-            autoPlay
-            loop
-            muted
-            playsInline
-          >
-            <source src="https://drive.google.com/file/d/1zwVWchZcEdKryiOnp8W1xLtahtG5tj1F/view?usp=drive_link" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+            // src="https://youtu.be/99XGx_BKO_I?si=208bTgHMEwM5YJXJ"
+            title="YouTube Video"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          ></iframe>
         </div>
         <div className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
           <div className="flex flex-col lg:flex-row gap-16">
+
 
             {/* Skills Section */}
             <div className="lg:w-2/3">
