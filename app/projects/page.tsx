@@ -77,14 +77,6 @@ export default function ProjectsPage() {
       <Navigation />
       <div className="relative">{/* Video at the top */}
         <div className="absolute top-0 left-0 w-full h-full z-[-1]">
-          <iframe
-            className="w-full h-full object-cover"
-            // src="https://youtu.be/99XGx_BKO_I?si=208bTgHMEwM5YJXJ"
-            title="YouTube Video"
-            frameBorder="0"
-            allow="autoplay; encrypted-media"
-            allowFullScreen
-          ></iframe>
         </div>
         <div className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
           <div className="flex flex-col lg:flex-row gap-16">
