@@ -4,12 +4,19 @@ import LocalFont from "@next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
 
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const calSans = LocalFont({
+  src: "../public/fonts/CalSans-SemiBold.ttf",
+  variable: "--font-calsans",
+});
+
 export const metadata: Metadata = {
-  title: {
-    default: "Kreeshaya@portfolio.com",
-    template: "%s | Kreeshaya@portfolio.com",
-  },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  title: "Kreeshaya - Portfolio",
+  description: "Multimedia Designer & Web Developer",
   openGraph: {
     title: "Kreeshaya@portfolio.com",
     description:
@@ -45,15 +52,6 @@ export const metadata: Metadata = {
     shortcut: "/favicon.png",
   },
 };
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-const calSans = LocalFont({
-  src: "../public/fonts/CalSans-SemiBold.ttf",
-  variable: "--font-calsans",
-});
 
 export default function RootLayout({
   children,
@@ -69,7 +67,9 @@ export default function RootLayout({
         className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
           }`}
       >
-        {children}
+        <div className="animate-fade-in">
+          {children}
+        </div>
       </body>
     </html>
   );
