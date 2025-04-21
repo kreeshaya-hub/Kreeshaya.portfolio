@@ -3,7 +3,11 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
-export const Navigation: React.FC = () => {
+interface NavigationProps {
+	currentPage: string;
+}
+
+export const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
 	const ref = useRef<HTMLElement>(null);
 	const [isIntersecting, setIntersecting] = useState(true);
 
@@ -29,13 +33,13 @@ export const Navigation: React.FC = () => {
 				<div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
 					<div className="flex justify-between gap-8">
 						<Link
-							href="/projects"
+							href={currentPage === "multimedia" ? "../webDeveloper" : "../multimediaDesigner"}
 							className="duration-200 text-zinc-400 hover:text-zinc-100"
 						>
-							Projects
+							{currentPage === "multimedia" ? "Web Developer" : "Multimedia Designer"}
 						</Link>
 						<Link
-							href="/contact"
+							href="../contact"
 							className="duration-200 text-zinc-400 hover:text-zinc-100"
 						>
 							Contact
@@ -43,7 +47,7 @@ export const Navigation: React.FC = () => {
 					</div>
 
 					<Link
-						href="/"
+						href="../"
 						className="duration-200 text-zinc-300 hover:text-zinc-100"
 					>
 						<ArrowLeft className="w-6 h-6 " />

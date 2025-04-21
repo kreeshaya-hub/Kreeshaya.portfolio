@@ -73,6 +73,7 @@ const projectsData = [
 
 export default function MultimediaDesigner() {
   const [showContent, setShowContent] = useState(false);
+  const [showTitleInNavbar, setShowTitleInNavbar] = useState(false);
   const categories = ["Commercial Films", "Amazon Prime Video Specials", "Social Media Content"];
 
   useEffect(() => {
@@ -87,13 +88,14 @@ export default function MultimediaDesigner() {
   return (
     <Card>
       <div className="flex flex-col items-center w-screen min-h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
-        <Navigation />
+        <Navigation currentPage="multimedia" />
         
         <motion.div 
           className="fixed top-20 left-0 right-0 flex justify-center z-50"
-          initial={{ top: "50%", transform: "translateY(-50%)" }}
-          animate={showContent ? { top: "5rem" } : { top: "50%", transform: "translateY(-50%)" }}
+          initial={{ top: "50%", opacity: 1 }}
+          animate={showContent ? { top: "0", opacity: 0 } : { top: "50%", opacity: 1 }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
+          onAnimationComplete={() => setShowTitleInNavbar(true)}
         >
           <h1 className="py-3.5 px-0.5 z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-7xl whitespace-nowrap bg-clip-text">
             Multimedia Designer
