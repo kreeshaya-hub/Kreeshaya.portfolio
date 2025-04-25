@@ -1,5 +1,5 @@
 export const metadata = {
-	title: "Multimedia Designer",
+	title: "Web Developer",
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
